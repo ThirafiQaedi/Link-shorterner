@@ -1,4 +1,4 @@
-# Pendekin — Link Shortener Mini
+# Link Shortener Mini
 
 Pemendek link sederhana dengan HTML, CSS, JavaScript, dan PHP. Data disimpan di file JSON, jadi tidak perlu database.
 
@@ -11,11 +11,10 @@ Pemendek link sederhana dengan HTML, CSS, JavaScript, dan PHP. Data disimpan di 
 - Responsif dan aman dari XSS (`htmlspecialchars`)
 
 ## Menjalankan di komputer
-Butuh PHP 7.4+.
+Pastikan sudah terinstall PHP 7.4 atau yang lebih baru.
 
-    php -S localhost:8000
+    terminal: ```php -S localhost:8000
 
-Buka http://localhost:8000
 
 ## Struktur
 | File | Fungsi |
@@ -27,8 +26,6 @@ Buka http://localhost:8000
 | `style.css` | Tampilan |
 | `data/links.json` | Penyimpanan data |
 
-## Deploy
-Gunakan hosting PHP gratis (mis. InfinityFree). Upload semua file lalu pastikan folder `data/` bisa ditulis (permission 755 atau 775).
 
 ## Keterbatasan
 - Penyimpanan JSON cocok untuk demo, bukan trafik besar. Untuk produksi, ganti ke MySQL/SQLite.
