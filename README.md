@@ -12,6 +12,7 @@ Pemendek link sederhana dengan HTML, CSS, JavaScript, dan PHP. Data disimpan di 
 
 ## Menjalankan di komputer
 Pastikan sudah terinstall PHP 7.4 atau yang lebih baru.
+    
     php -S localhost:8000
 
 
