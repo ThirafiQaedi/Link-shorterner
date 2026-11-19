@@ -33,5 +33,5 @@ Pastikan sudah terinstall PHP 7.4 atau yang lebih baru.
 - Perlindungan folder `data/` lewat `.htaccess` hanya berlaku di Apache.
 
 ## Ide pengembangan
-- Alias kustom (`?c=promo2026`)
-- Tanggal kedaluwarsa link
+- Bisa buat Alias kustom 
+- Buat auto delete tanggal kedaluwarsa link
