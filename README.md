@@ -12,8 +12,7 @@ Pemendek link sederhana dengan HTML, CSS, JavaScript, dan PHP. Data disimpan di 
 
 ## Menjalankan di komputer
 Pastikan sudah terinstall PHP 7.4 atau yang lebih baru.
-
-    terminal: ```php -S localhost:8000
+    php -S localhost:8000
 
 
 ## Struktur
@@ -28,12 +27,10 @@ Pastikan sudah terinstall PHP 7.4 atau yang lebih baru.
 
 
 ## Keterbatasan
-- Penyimpanan JSON cocok untuk demo, bukan trafik besar. Untuk produksi, ganti ke MySQL/SQLite.
+- Penyimpanan JSON cocok untuk demo, bukan trafik besar. Untuk produksi, ganti ke MySQL.
 - Daftar "Link terbaru" tampil ke semua pengunjung. Hapus bagian itu jika link harus privat.
 - Perlindungan folder `data/` lewat `.htaccess` hanya berlaku di Apache.
 
 ## Ide pengembangan
 - Alias kustom (`?c=promo2026`)
-- Halaman statistik per link
 - Tanggal kedaluwarsa link
-- Pretty URL lewat `.htaccess` (`/abc123` bukan `/go.php?c=abc123`)
