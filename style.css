@@ -1,0 +1,213 @@
+:root {
+    --bg: #eef2f7;
+    --ink: #0e1b2c;
+    --muted: #55657a;
+    --line: #cbd5e1;
+    --cobalt: #2d4bff;
+    --cobalt-dark: #1e35c9;
+    --mint: #b8f2d0;
+    --error: #b42318;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+.wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 4rem 1.25rem 3rem;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 7vw, 3.6rem);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    margin: 0 0 1rem;
+}
+
+h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+}
+
+.lead {
+    color: var(--muted);
+    font-size: 1.15rem;
+    margin: 0 0 2rem;
+    max-width: 46ch;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* Form */
+.shorten-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.shorten-form input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.9rem 1rem;
+    font: inherit;
+    color: var(--ink);
+    background: #fff;
+    border: 2px solid var(--line);
+    border-radius: 10px;
+}
+
+.shorten-form input:focus-visible {
+    outline: none;
+    border-color: var(--cobalt);
+}
+
+.button {
+    display: inline-block;
+    padding: 0.9rem 1.4rem;
+    font: inherit;
+    font-weight: 600;
+    color: #fff;
+    background: var(--cobalt);
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover { background: var(--cobalt-dark); }
+
+.button:focus-visible,
+.copy-small:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--cobalt);
+    outline-offset: 2px;
+}
+
+.error {
+    color: var(--error);
+    margin: 0.75rem 0 0;
+    font-weight: 600;
+}
+
+/* Hasil: satu-satunya blok gelap di halaman, jadi langsung jadi pusat perhatian */
+.result {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--ink);
+    color: #fff;
+    border-radius: 14px;
+    animation: pop 0.25s ease-out;
+}
+
+.result-label {
+    margin: 0 0 0.5rem;
+    color: var(--mint);
+    font-weight: 600;
+}
+
+.short-url {
+    display: block;
+    margin-bottom: 1.1rem;
+    color: #fff;
+    font-size: clamp(1.1rem, 4.5vw, 1.7rem);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    overflow-wrap: anywhere;
+}
+
+.button-light { background: var(--mint); color: var(--ink); }
+.button-light:hover { background: #d4f8e3; }
+
+.original {
+    margin: 1rem 0 0;
+    color: #9fb0c6;
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+/* Daftar link terbaru */
+.recent { margin-top: 3rem; }
+
+.recent ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--line);
+}
+
+.recent li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.row-main { flex: 1; min-width: 0; }
+
+.row-main a {
+    font-weight: 800;
+    color: var(--cobalt);
+    text-decoration: none;
+}
+
+.row-url {
+    display: block;
+    color: var(--muted);
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+.row-clicks { color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
+
+.copy-small {
+    padding: 0.4rem 0.8rem;
+    font: inherit;
+    font-size: 0.9rem;
+    color: var(--ink);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.copy-small:hover { border-color: var(--cobalt); }
+
+.empty { color: var(--muted); }
+
+footer {
+    margin-top: 3rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+@keyframes pop {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .result { animation: none; }
+}
+
+@media (max-width: 520px) {
+    .wrap { padding-top: 2.5rem; }
+    .shorten-form { flex-direction: column; }
+    .recent li { flex-wrap: wrap; }
+}
